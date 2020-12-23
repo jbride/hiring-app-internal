@@ -1,3 +1,20 @@
+# App Notes
+1. source trace to api call:
+
+   ```
+    src/index.tsx   :   <AppContainer/>
+        src/app/index.tsx   :   <App />
+            src/app/app.tsx     :   <AppRouter />
+                src/routes.tsx      :   <DashboardContainer />
+
+                    src/dashboard/index.tsx :   jobListFecth
+                        src/store/jobs/actions.ts :   function jobListFecth
+                            src/store/api.ts        :   default.jobs.list    
+        
+   ```
+
+
+
 # Patternfly Seed
 
 Patternfly Seed is an open source build scaffolding utility for web apps. The primary purpose of this project is to give developers a jump start when creating new projects that will use patternfly. A secondary purpose of this project is to serve as a reference for how to configure various aspects of an application that uses patternfly.
